@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23db7ca3a4b80eb47b3d28c97467c078, type: 3}
+  m_Name: Drop
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterData
+  character: 2
+  characterName: "\uB4DC\uB86D"
+  characterID: 3
+  icon: {fileID: -442599455, guid: dcd4a9c217bc1d54594b4ffeddf05d91, type: 3}
+  description: "\uC801\uB4E4\uACFC \uC2E0\uB098\uB294\n\uCE90\uCE58\uBCFC\uC744 \uC990\uAE41\uB2C8\uB2E4."
+  Illustrate: {fileID: -2425571047108726619, guid: dcd4a9c217bc1d54594b4ffeddf05d91, type: 3}
+  moveAnim: {fileID: 22100000, guid: dc9125d13639dc24b8544b5bfabb68a9, type: 2}
+  type: 0
+  maxHealth: 10
+  originSpeed: 3
+  originPower: 4
+  skills:
+  - {fileID: 11400000, guid: 8523857f49a64bb4c9e5da5d64400d37, type: 2}
+  - {fileID: 11400000, guid: e2bf1091d43e0184dacb10c60c8ccc79, type: 2}
+  skillCount: 2

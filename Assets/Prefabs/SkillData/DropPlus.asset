@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd4bc6893c1be9449c5bc8e9efc05a5, type: 3}
+  m_Name: DropPlus
+  m_EditorClassIdentifier: Assembly-CSharp::SkillData
+  type: 1
+  skillID: 7
+  skillName: "\uD30C\uAD34\uB825 \uAC15\uD55C \uD30C\uC6B8"
+  description: "\uB4DC\uB86D\uC774 360\uB3C4\uB85C \uC57C\uAD6C \uBC30\uD2B8\uB97C
+    \uD718\uB450\uB978\uB2E4.\n\uB808\uBCA8\uC5C5\uC2DC \uCFE8\uD0C0\uC784\uC774
+    {0}\uCD08 \uAC10\uC18C\uD55C\uB2E4."
+  icon: {fileID: -3804954258634786771, guid: 761d3dc7f27974c4aa00be9b85a1f6a6, type: 3}
+  isActiveSkill: 1
+  canLevelUp: 1
+  maxLevel: 3
+  baseCoolTime: 20
+  projectilePrefab: {fileID: 6284820318332091295, guid: 4c14baa22dc530e4d81bd9efaecdbce2, type: 3}
+  levels:
+  - type: 1
+    value: 0
+  - type: 1
+    value: 3
+  - type: 1
+    value: 5
+  - type: 1
+    value: 7

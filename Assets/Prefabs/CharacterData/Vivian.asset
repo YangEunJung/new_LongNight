@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23db7ca3a4b80eb47b3d28c97467c078, type: 3}
+  m_Name: Vivian
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterData
+  character: 6
+  characterName: "\uBE44\uBE44\uC548"
+  characterID: 7
+  icon: {fileID: -1930453079, guid: 60879ca4d723e4e488a62eba7aab3821, type: 3}
+  description: "<\uC9C0\uC6D0 \uC0AC\uACA9>\n\uC77C\uC815 \uC8FC\uAE30\uB9C8\uB2E4
+    \n\uD3EC\uD0D1\uC744 \uC124\uCE58\uD574 \n\uC801\uC744 \uACF5\uACA9\uD569\uB2C8\uB2E4."
+  Illustrate: {fileID: -2453163177400033315, guid: 60879ca4d723e4e488a62eba7aab3821, type: 3}
+  moveAnim: {fileID: 22100000, guid: 48faa6de58d420c408e3657cadbf6324, type: 2}
+  type: 1
+  maxHealth: 0
+  originSpeed: 0
+  originPower: 3
+  skills:
+  - {fileID: 11400000, guid: 56ab5cbccd679e74db00ac904c392477, type: 2}
+  skillCount: 1

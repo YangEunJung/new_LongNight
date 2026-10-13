@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23db7ca3a4b80eb47b3d28c97467c078, type: 3}
+  m_Name: AmelFront
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterData
+  character: 7
+  characterName: "\uC544\uBA5C"
+  characterID: 8
+  icon: {fileID: -1540702393, guid: 9b4e557320f354c4eaa0b2c9cca3820c, type: 3}
+  description: "\uB9C8\uB825\uC774 \uAC00\uB4DD \uB2F4\uAE34 \n\uCE74\uB4DC\uB97C
+    \uB0A0\uB9BD\uB2C8\uB2E4."
+  Illustrate: {fileID: -3509240733601661293, guid: 9b4e557320f354c4eaa0b2c9cca3820c, type: 3}
+  moveAnim: {fileID: 22100000, guid: f4cafcab461be1a49823ad95248d3598, type: 2}
+  type: 0
+  maxHealth: 10
+  originSpeed: 3
+  originPower: 3
+  skills:
+  - {fileID: 11400000, guid: e767842e6ab232343b0eaefcf2eafdbb, type: 2}
+  - {fileID: 11400000, guid: 89ba8f9783372264a9a31fa56a084bf6, type: 2}
+  skillCount: 2

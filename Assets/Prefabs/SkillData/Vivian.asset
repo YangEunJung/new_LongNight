@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd4bc6893c1be9449c5bc8e9efc05a5, type: 3}
+  m_Name: Vivian
+  m_EditorClassIdentifier: Assembly-CSharp::SkillData
+  type: 0
+  skillID: 12
+  skillName: "\uC9C0\uC6D0 \uC0AC\uACA9"
+  description: "\uBE44\uBE44\uC548\uC774 1\uBD84\uB9C8\uB2E4 \uD55C \uBC88\uC529
+    \n\uD3EC\uD0D1\uC744 \uC124\uCE58\uD574 \uC801\uC744 \uACF5\uACA9\uD55C\uB2E4."
+  icon: {fileID: -8924386549037017256, guid: 91b9b81494be8eb4f89d5c511dda3228, type: 3}
+  canLevelUp: 0
+  maxLevel: 0
+  baseCoolTime: 15
+  projectilePrefab: {fileID: 5870707141722628130, guid: 9a732215f69db21498da62a2ea878815, type: 3}
+  levels: []

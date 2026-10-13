@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd4bc6893c1be9449c5bc8e9efc05a5, type: 3}
+  m_Name: MistyBasic
+  m_EditorClassIdentifier: Assembly-CSharp::SkillData
+  type: 0
+  skillID: 8
+  skillName: "\uC545\uBCF4 \uC9D3\uAE30"
+  description: "\uBBF8\uC2A4\uD2F0\uAC00 \uC801\uB4E4\uC744 \uD5A5\uD574 \uBC14\uC774\uC62C\uB9B0\uC744
+    \uC5F0\uC8FC\uD55C\uB2E4.\r\n\uB808\uBCA8\uC5C5\uC2DC \uC791\uACE1 \uC2DC\uAC04\uC774
+    {0}\uCD08 \uC99D\uAC00\uD55C\uB2E4."
+  icon: {fileID: -4810996483848302477, guid: b7a5465afc5cdf54cb1cd7195ff1e388, type: 3}
+  canLevelUp: 1
+  maxLevel: 3
+  baseCoolTime: 0
+  projectilePrefab: {fileID: 8194630224562591292, guid: 2e51ce565f2c95048a317a1c803e0285, type: 3}
+  levels:
+  - type: 5
+    value: 7
+  - type: 5
+    value: 2
+  - type: 5
+    value: 2
+  - type: 5
+    value: 4
