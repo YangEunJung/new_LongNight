@@ -16,9 +16,10 @@ public class GameManager : MonoBehaviour
     // 팀메이커에 넘길 땐 배열로 넘겨야 한다. 나중에 작성 ㄱㄱ
     public CharacterData[] allCharacters; // 인스펙터에서 연결
     public GameObject currentMap;
-    //public int mapIndex = 0; // 추가 
-    //public int storyIndex = 0; // 추가
-    //public GameObject[] flowCharts; // 추가
+
+    // 추가?
+    const string QuestIndexKey = "QuestIndexKey";
+
 
     [Header("# Plag")]
     public bool isTeamMaking;
@@ -26,10 +27,11 @@ public class GameManager : MonoBehaviour
     public bool isStory; // 추가
 
     [Header("# Object")]
-    public GameObject TeamMaker;
+    public GameObject TeamMakerUI;
     public GameObject BattleSessionHUD;
     public GuideManager Guide; // 추가
     public GameObject[] maps;
+    public TeamMaker TeamMaker; // 추가 및 오브젝트에서 연결 필요
 
     public GameObject virtualCamera; // 추가
 
@@ -67,12 +69,18 @@ public class GameManager : MonoBehaviour
         }
 
         questIndex = 0;
+        PlayerPrefs.SetInt(QuestIndexKey, 0);
     }
 
     // 게임 시작시 한 번만 실행
     void LoadPlayableCharacters()
     {
         playables.Clear();
+
+        // ★ 1. 기본 지급 캐릭터(프리즘, 루나)는 저장소와 무관하게 무조건 먼저 추가합니다.
+        AddPlayableCharacter(CharacterData.Character.Prism); // (프리즘의 enum 이름에 맞춰주세요)
+        AddPlayableCharacter(CharacterData.Character.Luna);   // (루나의 enum 이름에 맞춰주세요)
+
         foreach (Quest quest in quests)
         {
             if (PlayerPrefs.GetInt(quest.ToString()) == 1)
@@ -80,6 +88,11 @@ public class GameManager : MonoBehaviour
                 MakePlayableCharacter(quest);
             }
         }
+
+        // 추가?
+        questIndex = PlayerPrefs.GetInt(QuestIndexKey, 0);
+        // 범위를 벗어난 저장 데이터 방지
+        questIndex = Mathf.Clamp(questIndex, 0, quests.Length);
     }
 
     void MakePlayableCharacter(Quest quest)
@@ -93,6 +106,8 @@ public class GameManager : MonoBehaviour
             case Quest.Chapter1_0:
                 // 드롭 추가
                 AddPlayableCharacter(CharacterData.Character.Drop);
+                break;
+            case Quest.Chapter1_1:
                 break;
             case Quest.Chapter2:
                 // 도화 추가
@@ -127,15 +142,19 @@ public class GameManager : MonoBehaviour
         {
             playables.Add(data);
         }
+
+        // 추가?
+        TeamMaker.playables = playables.ToArray();
     }
 
     // 스토리 클리어시 PlayerPref.SetInt 1 하고 MakePlayableCharacter 호출하는 함수
-    void UnlockQuest(Quest quest)
+    public void UnlockQuest(Quest quest)
     {
         PlayerPrefs.SetInt(quest.ToString(), 1);
-        PlayerPrefs.Save();
 
         MakePlayableCharacter(quest);
+
+        PlayerPrefs.Save();
     }
 
     // 스토리에 따라 맵을 적용시킴, 수정
@@ -171,7 +190,7 @@ public class GameManager : MonoBehaviour
         // 플레이어블 캐릭터를 넘기는 로직을 생각해봐야겠다. 
 
         //StorySessionHUD.SetActive(false);
-        TeamMaker.SetActive(true);
+        TeamMakerUI.SetActive(true);
         BattleSessionHUD.SetActive(false);
 
         if (currentQuest == Quest.Prologue_0)
@@ -186,7 +205,7 @@ public class GameManager : MonoBehaviour
         isBattle = true;
         isStory = false;
 
-        TeamMaker.SetActive(false);
+        TeamMakerUI.SetActive(false);
         //StorySessionHUD.SetActive(false);
         BattleSessionHUD.SetActive(true);
 
@@ -199,15 +218,25 @@ public class GameManager : MonoBehaviour
 
     public void StartStory()
     {
+        // 더 진행할 퀘스트가 없는지 확인
+        if (questIndex >= quests.Length)
+        {
+            Debug.Log("모든 스토리를 완료했습니다.");
+            return;
+        }
+
         isTeamMaking = false;
         isBattle = false;
         isStory = true;
 
-        TeamMaker.SetActive(false);
+        TeamMakerUI.SetActive(false);
         BattleSessionHUD.SetActive(false);
         //StorySessionHUD.SetActive(true);
 
         currentQuest = quests[questIndex];
+
+        // 추가?
+        // UnlockQuest(currentQuest);
         
 
         // ★ 추가: 스토리가 진행될 때는 플레이어 추적 카메라 끄기
@@ -216,7 +245,17 @@ public class GameManager : MonoBehaviour
         // 추가
         Fungus.Flowchart.BroadcastFungusMessage(currentQuest.ToString());
 
+        //questIndex++;
+
+    }
+
+    public void CompleteCurrentQuest()
+    {
+        UnlockQuest(currentQuest);
+
         questIndex++;
 
+        PlayerPrefs.SetInt(QuestIndexKey, questIndex);
+        PlayerPrefs.Save();
     }
 }
