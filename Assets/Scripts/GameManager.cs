@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public enum Quest { Prologue_0, Prologue_1, Chapter1_0, Chapter1_1, Chapter2, Chapter3, Chapter4, Chapter5, Chapter6, Chapter7 }; // temp
+    public enum Quest { Prologue_0, Battle_0, Prologue_1, Chapter1_0, Battle_1, Chapter1_1, Chapter2, Chapter3, Chapter4, Chapter5, Chapter6, Chapter7 }; // temp
     Quest[] quests;
     public Quest currentQuest; // Ãß°¡
     public int questIndex = 0;
