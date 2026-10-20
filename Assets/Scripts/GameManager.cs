@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     // 추가?
     const string QuestIndexKey = "QuestIndexKey";
 
+    // 추가?
+    const string PlayerNameKey = "PlayerName";
+
 
     [Header("# Plag")]
     public bool isTeamMaking;
@@ -51,6 +54,13 @@ public class GameManager : MonoBehaviour
             QuestInit();
         }
         LoadPlayableCharacters();
+
+        // 플레이어 이름 저장 추가
+        string savedName = PlayerPrefs.GetString(PlayerNameKey, "");
+        Flowchart flowchart = FindFirstObjectByType<Flowchart>();
+        if (flowchart != null && !string.IsNullOrEmpty(savedName)){
+            flowchart.SetStringVariable("playerName", savedName);
+        }
     }
 
     private void Start()
@@ -145,6 +155,13 @@ public class GameManager : MonoBehaviour
 
         // 추가?
         TeamMaker.playables = playables.ToArray();
+    }
+
+    // 플레이어 이름 저장 추가
+    public void SavePlayerName(string playerName)
+    {
+        PlayerPrefs.SetString(PlayerNameKey, playerName);
+        PlayerPrefs.Save();
     }
 
     // 스토리 클리어시 PlayerPref.SetInt 1 하고 MakePlayableCharacter 호출하는 함수
