@@ -2979,7 +2979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FungusState
-  selectedFlowchart: {fileID: 996770993}
+  selectedFlowchart: {fileID: 1748757345}
 --- !u!4 &108910162
 Transform:
   m_ObjectHideFlags: 1
@@ -139178,6 +139178,7 @@ GameObject:
   - component: {fileID: 1748757499}
   - component: {fileID: 1748757498}
   - component: {fileID: 1748757497}
+  - component: {fileID: 1748757500}
   m_Layer: 0
   m_Name: PrologueZero
   m_TagString: Untagged
@@ -140184,6 +140185,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1748757500}
   - {fileID: 1748757348}
   - {fileID: 1748757347}
   - {fileID: 1748757314}
@@ -140579,7 +140581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Block
   nodeRect:
     serializedVersion: 2
-    x: 346.60342
+    x: 347.8855
     y: 66.22943
     width: 101.380005
     height: 40
@@ -140773,8 +140775,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1748757337}
-  selectedCommands: []
+  - {fileID: 1748757329}
+  selectedCommands:
+  - {fileID: 1748757500}
   variables:
   - {fileID: 1748757334}
   description: 
@@ -144976,6 +144979,51 @@ MonoBehaviour:
   move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &1748757500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748757274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.InvokeMethod
+  itemId: 224
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 867724055}
+  targetComponentAssemblyName: GameManager, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: 'UnityEngine.Component[]'
+  targetComponentText: GameManager
+  targetMethod: SavePlayerName
+  targetMethodText: 'SavePlayerName (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: playerName
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &1754898088
 GameObject:
   m_ObjectHideFlags: 0
