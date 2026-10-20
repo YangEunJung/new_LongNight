@@ -187,6 +187,9 @@ public class GameManager : MonoBehaviour
             case Quest.Chapter1_0:
                 currentMap = maps[1];
                 break;
+            case Quest.Chapter3_0:
+                currentMap = maps[2];
+                break;
             default:
                 break;
         }
