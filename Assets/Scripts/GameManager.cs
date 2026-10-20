@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public enum Quest { Prologue_0, Battle_0, Prologue_1, Chapter1_0, Battle_1, Chapter1_1, Chapter2, Chapter3, Chapter4, Chapter5, Chapter6, Chapter7 }; // temp
+    public enum Quest { Prologue_0, Battle_0, Prologue_1, Chapter1_0, Battle_1, Chapter1_1, Chapter2, Chapter3_0, Battle_3, Chapter3_1, Chapter4, Chapter5, Chapter6, Chapter7 }; // temp
     Quest[] quests;
     public Quest currentQuest; // 추가
     public int questIndex = 0;
@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour
                 // 비비안 추가
                 AddPlayableCharacter(CharacterData.Character.Vivian);
                 break;
-            case Quest.Chapter3:
+            case Quest.Chapter3_0:
                 break;
             case Quest.Chapter4:
                 // 미스티 추가

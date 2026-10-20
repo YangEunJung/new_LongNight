@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5dc1244959c44da418f8722c4895f792
+guid: 8a72bed2a67219245ac73e4e2501e166
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7404959303227268099
-    second: bath_street_0
+      213: -5298228054426493244
+    second: abbey_hall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bath_street_0
+      name: abbey_hall_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df32ae23fbc4c3990800000000000000
-      internalID: -7404959303227268099
+      spriteID: 4ce56ecd7a9e876b0800000000000000
+      internalID: -5298228054426493244
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bath_street_0: -7404959303227268099
+      abbey_hall_0: -5298228054426493244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
