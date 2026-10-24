@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public enum Quest { Prologue_0, Battle_0, Prologue_1, Chapter1_0, Battle_1, Chapter1_1, Chapter2, Chapter3_0, Battle_3, Chapter3_1, Chapter4, Chapter5, Chapter6, Chapter7 }; // temp
+    public enum Quest { Prologue_0, Battle_0, Prologue_1, Chapter1_0, Battle_1, Chapter1_1, Chapter2, 
+        Chapter3_0, Battle_3, Chapter3_1, Chapter4, Chapter5_0, Battle_5, Chapter5_1, Chapter6, Chapter7 }; // temp
     Quest[] quests;
     public Quest currentQuest; // 추가
     public int questIndex = 0;
@@ -131,7 +132,7 @@ public class GameManager : MonoBehaviour
                 // 미스티 추가
                 AddPlayableCharacter(CharacterData.Character.Misty);
                 break;
-            case Quest.Chapter5:
+            case Quest.Chapter5_0:
                 // 아멜 추가
                 AddPlayableCharacter(CharacterData.Character.AmelF);
                 AddPlayableCharacter(CharacterData.Character.AmelD);
@@ -189,6 +190,9 @@ public class GameManager : MonoBehaviour
                 break;
             case Quest.Chapter3_0:
                 currentMap = maps[2];
+                break;
+            case Quest.Chapter5_0:
+                currentMap = maps[3];
                 break;
             default:
                 break;
