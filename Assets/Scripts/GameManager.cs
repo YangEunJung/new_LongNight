@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public enum Quest { Prologue_0, Battle_0, Prologue_1, Chapter1_0, Battle_1, Chapter1_1, Chapter2, 
-        Chapter3_0, Battle_3, Chapter3_1, Chapter4, Chapter5_0, Battle_5, Chapter5_1, Chapter6, Chapter7 }; // temp
+        Chapter3_0, Battle_3, Chapter3_1, Chapter4, Chapter5_0, Battle_5, Chapter5_1, 
+        Chapter6_0, Chapter7 }; // temp
     Quest[] quests;
     public Quest currentQuest; // 추가
     public int questIndex = 0;
@@ -137,8 +138,8 @@ public class GameManager : MonoBehaviour
                 AddPlayableCharacter(CharacterData.Character.AmelF);
                 AddPlayableCharacter(CharacterData.Character.AmelD);
                 break;
-            case Quest.Chapter6:
-                break;
+            //case Quest.Chapter6:
+               // break;
             case Quest.Chapter7:
                 // 리엘 추가
                 AddPlayableCharacter(CharacterData.Character.Riel);
