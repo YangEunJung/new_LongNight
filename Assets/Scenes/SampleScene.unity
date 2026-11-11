@@ -87798,7 +87798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   per: -1
-  damage: 10000
+  damage: 20
   rigid: {fileID: 0}
 --- !u!4 &968533285
 Transform:
