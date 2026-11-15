@@ -23,7 +23,7 @@ public class PrismBasicSkillExecutor : SkillExecutor
         base.Init(owner, skillState);
 
         prefabID = 3;
-        damage = 20; // 몬스터 원콤을 위해
+        damage = 10; // 몬스터 원콤을 위해
         //maxCoolTime = skillState.coolTime; // 임시, 이후 구조 수정에 따라 변경될 수 있음.
         timer = 0;
 

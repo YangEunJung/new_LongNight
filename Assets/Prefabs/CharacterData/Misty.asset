@@ -22,7 +22,7 @@ MonoBehaviour:
   moveAnim: {fileID: 22100000, guid: bceb7d52388417f4db38924a11a0ab6a, type: 2}
   type: 0
   maxHealth: 10
-  originSpeed: 4
+  originSpeed: 2.5
   originPower: 5
   skills:
   - {fileID: 11400000, guid: 9f12c640301e8d84499272dd66df7399, type: 2}
